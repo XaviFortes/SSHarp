@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("SSHarp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Xavi Fortes")]
 [assembly: AssemblyProduct("SSHarp")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]

@@ -23,7 +23,8 @@ namespace SSHarp
     public partial class MainWindow : Window
     {
         private List<Session> sessions;
-        string appDataFolder;
+        // string appDataFolder;
+        readonly string appDataFolder = Globals.AppDataFolder;
 
         public MainWindow()
         {
@@ -41,7 +42,7 @@ namespace SSHarp
              * Directory.CreateDirectory(appDataFolder);
             */
 
-            appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "XaviFortes", "Terminal");
+            // appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "XaviFortes", "Terminal");
 
             if (!Directory.Exists(appDataFolder) || !Directory.Exists(Path.Combine(appDataFolder, "TempFiles")))
             {
@@ -49,6 +50,11 @@ namespace SSHarp
                 Directory.CreateDirectory(Path.Combine(appDataFolder, "TempFiles"));
             }
 
+            GitHubReleaseChecker releaseChecker = new GitHubReleaseChecker();
+            string currentVersion = releaseChecker.GetCurrentVersion();
+
+            // Check for updates
+            releaseChecker.CheckForUpdates(currentVersion);
         }
 
         private void LastUsedSessionButton_Click(object sender, RoutedEventArgs e)

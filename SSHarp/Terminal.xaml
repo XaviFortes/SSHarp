@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SSHarp"
         mc:Ignorable="d"
-        Title="Terminal" Height="450" Width="800">
+        Title="Terminal" Height="450" Width="800" Icon="/SSHarp.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>

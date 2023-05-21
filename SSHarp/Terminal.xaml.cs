@@ -23,7 +23,8 @@ namespace SSHarp
         private ShellStream shellStream;
         private SftpClient sftpClient;
         private Dictionary<string, bool> modifiedFiles = new Dictionary<string, bool>();
-        private string appDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "XaviFortes", "Terminal");
+        // private string appDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "XaviFortes", "Terminal");
+        readonly string appDataFolder = Globals.AppDataFolder;
         public Terminal(Session session)
         {
             InitializeComponent();
